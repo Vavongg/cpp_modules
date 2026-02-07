@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 12:15:24 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/02 10:59:24 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/02/07 11:48:38 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	main(int ac, char **av) {
 
 	if (!infile.is_open()) {
 		
-		std::cout << "Error: cannot create infile" << std::endl;
+		std::cout << "Error: cannot open infile" << std::endl;
 		return (1);
 	}
 
