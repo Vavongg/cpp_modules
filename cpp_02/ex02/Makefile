@@ -1,11 +1,11 @@
 # ================== VARIABLES ================== #
 
-NAME        = 
+NAME        = Fixed
 CC          = c++
 CFLAGS      = -Wall -Wextra -Werror -std=c++98
 RM          = rm -rf
 
-SRC         = 
+SRC         = src/main.cpp src/Fixed.cpp
 DIR_OBJS    = objs
 
 OBJ = $(SRC:src/%.cpp=$(DIR_OBJS)/%.o)

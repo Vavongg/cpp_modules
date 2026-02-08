@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 12:23:04 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/07 16:58:13 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/02/08 11:45:29 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Fixed {
 		Fixed(const Fixed &copy);
 		Fixed &operator=(const Fixed &copy);
 		int		getRawBits() const;
-		void	setRawBits(int const value);
+		void	setRawBits(int const raw);
 };
 
 #endif
