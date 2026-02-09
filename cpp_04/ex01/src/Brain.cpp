@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 15:31:04 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/09 15:55:39 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:54:19 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ Brain::~Brain() {
 }
 
 Brain::Brain(const Brain &copy) {
-
-	*this = copy;
+    std::cout << "Brain copy constructor called" << std::endl;
+    *this = copy;
 }
 
 Brain &Brain::operator=(const Brain &copy) {

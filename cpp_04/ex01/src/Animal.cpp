@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 13:42:48 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/09 14:04:45 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:56:02 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ Animal::~Animal() {
 
 Animal::Animal(const Animal &copy) {
 
+	std::cout << "Animal copy constructor called" << std::endl;
 	*this = copy;
 }
 
