@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 13:02:29 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/09 15:59:30 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/02/09 18:47:53 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Cat : public Animal {
 		Cat &operator=(const Cat &copy);
 
 		void	makeSound() const;
-		Brain *getBrain() const;
+		Brain 	*getBrain() const;
 };
 
 #endif
