@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 13:49:14 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/21 12:00:04 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/02/21 16:53:21 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 int main()
 {
-    std::cout << BOLD_CYAN << "\n╔════════════════════════════════════════╗" << RESET << std::endl;
-    std::cout << BOLD_CYAN << "║     BUREAUCRAT EXCEPTION TESTS         ║" << RESET << std::endl;
-    std::cout << BOLD_CYAN << "╚════════════════════════════════════════╝" << RESET << std::endl;
-
     std::cout << BOLD_BLUE << "\n=== TEST 1: Création normale ===" << RESET << std::endl;
     try {
         Bureaucrat alexis("Alexis", 50);

@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 13:49:14 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/21 16:14:50 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/02/21 16:53:08 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 int main()
 {
-    std::cout << BOLD_CYAN << "\n╔════════════════════════════════════════╗" << RESET << std::endl;
-    std::cout << BOLD_CYAN << "║         FORM EXCEPTION TESTS           ║" << RESET << std::endl;
-    std::cout << BOLD_CYAN << "╚════════════════════════════════════════╝" << RESET << std::endl;
-
     std::cout << BOLD_BLUE << "\n=== TEST 1: Création de formulaire valide ===" << RESET << std::endl;
     try {
         Form test1("Test 1", 50, 25);
