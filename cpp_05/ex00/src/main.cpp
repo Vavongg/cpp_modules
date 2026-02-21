@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 13:49:14 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/18 13:57:52 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/02/21 12:00:04 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int main()
 
     std::cout << BOLD_BLUE << "\n=== TEST 1: Création normale ===" << RESET << std::endl;
     try {
-        Bureaucrat bob("Bob", 50);
-        std::cout << GREEN << bob << RESET << std::endl;
+        Bureaucrat alexis("Alexis", 50);
+        std::cout << GREEN << alexis << RESET << std::endl;
     }
     catch (std::exception &e) {
         std::cout << RED << "Exception: " << e.what() << RESET << std::endl;
@@ -29,8 +29,8 @@ int main()
 
     std::cout << BOLD_BLUE << "\n=== TEST 2: Grade trop haut (0) ===" << RESET << std::endl;
     try {
-        Bureaucrat alice("Alice", 0);
-        std::cout << GREEN << alice << RESET << std::endl;
+        Bureaucrat yasser("Yasser", 0);
+        std::cout << GREEN << yasser << RESET << std::endl;
     }
     catch (std::exception &e) {
         std::cout << BOLD_RED << "❌ Exception: " << e.what() << RESET << std::endl;
@@ -38,8 +38,8 @@ int main()
 
     std::cout << BOLD_BLUE << "\n=== TEST 3: Grade trop bas (200) ===" << RESET << std::endl;
     try {
-        Bureaucrat charlie("Charlie", 200);
-        std::cout << GREEN << charlie << RESET << std::endl;
+        Bureaucrat walid("Walid", 200);
+        std::cout << GREEN << walid << RESET << std::endl;
     }
     catch (std::exception &e) {
         std::cout << BOLD_RED << "❌ Exception: " << e.what() << RESET << std::endl;
@@ -47,10 +47,10 @@ int main()
 
     std::cout << BOLD_BLUE << "\n=== TEST 4: Incrémenter normalement ===" << RESET << std::endl;
     try {
-        Bureaucrat dave("Dave", 100);
-        std::cout << YELLOW << "Avant: " << dave << RESET << std::endl;
-        dave.incrementGrade();
-        std::cout << GREEN << "Après increment: " << dave << RESET << std::endl;
+        Bureaucrat rydom("Rydom", 100);
+        std::cout << YELLOW << "Avant: " << rydom << RESET << std::endl;
+        rydom.incrementGrade();
+        std::cout << GREEN << "Après increment: " << rydom << RESET << std::endl;
     }
     catch (std::exception &e) {
         std::cout << RED << "Exception: " << e.what() << RESET << std::endl;
@@ -58,10 +58,10 @@ int main()
 
     std::cout << BOLD_BLUE << "\n=== TEST 5: Décrémenter normalement ===" << RESET << std::endl;
     try {
-        Bureaucrat eve("Eve", 100);
-        std::cout << YELLOW << "Avant: " << eve << RESET << std::endl;
-        eve.decrementGrade();
-        std::cout << GREEN << "Après decrement: " << eve << RESET << std::endl;
+        Bureaucrat senshy("Senshy", 100);
+        std::cout << YELLOW << "Avant: " << senshy << RESET << std::endl;
+        senshy.decrementGrade();
+        std::cout << GREEN << "Après decrement: " << senshy << RESET << std::endl;
     }
     catch (std::exception &e) {
         std::cout << RED << "Exception: " << e.what() << RESET << std::endl;
@@ -69,10 +69,10 @@ int main()
 
     std::cout << BOLD_BLUE << "\n=== TEST 6: Incrémenter au-delà de 1 ===" << RESET << std::endl;
     try {
-        Bureaucrat frank("Frank", 1);
-        std::cout << YELLOW << "Avant: " << frank << RESET << std::endl;
-        frank.incrementGrade();
-        std::cout << GREEN << "Après increment: " << frank << RESET << std::endl;
+        Bureaucrat kyks("Kyks", 1);
+        std::cout << YELLOW << "Avant: " << kyks << RESET << std::endl;
+        kyks.incrementGrade();
+        std::cout << GREEN << "Après increment: " << kyks << RESET << std::endl;
     }
     catch (std::exception &e) {
         std::cout << BOLD_RED << "❌ Exception: " << e.what() << RESET << std::endl;
@@ -80,10 +80,10 @@ int main()
 
     std::cout << BOLD_BLUE << "\n=== TEST 7: Décrémenter au-delà de 150 ===" << RESET << std::endl;
     try {
-        Bureaucrat grace("Grace", 150);
-        std::cout << YELLOW << "Avant: " << grace << RESET << std::endl;
-        grace.decrementGrade();
-        std::cout << GREEN << "Après decrement: " << grace << RESET << std::endl;
+        Bureaucrat wassim("Wassim", 150);
+        std::cout << YELLOW << "Avant: " << wassim << RESET << std::endl;
+        wassim.decrementGrade();
+        std::cout << GREEN << "Après decrement: " << wassim << RESET << std::endl;
     }
     catch (std::exception &e) {
         std::cout << BOLD_RED << "❌ Exception: " << e.what() << RESET << std::endl;
