@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 12:26:56 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/21 15:41:52 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/02/21 16:57:04 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ const char*	Form::GradeTooLowException::what() const throw() {
 
 	return "Grade is too low";
 }
+
+//operator
 
 std::ostream &operator<<(std::ostream &o, Form const &f) {
 
