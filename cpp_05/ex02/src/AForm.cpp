@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 12:26:56 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/21 17:22:49 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/02/21 17:31:23 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	AForm::beSigned(Bureaucrat const &bureaucrat) {
 	_signed = true;
 }
 
-//execptions
+//exceptions
 
 const char*	AForm::GradeTooHighException::what() const throw() {
 
