@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 15:48:18 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/21 17:20:21 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/02/26 13:32:34 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ class Bureaucrat {
 		void	incrementGrade();
 		void	decrementGrade();
 		void	signForm(AForm &form);
+		void	executeForm(AForm const &aform) const;
 
 		class	GradeTooHighException : public std::exception {
 
