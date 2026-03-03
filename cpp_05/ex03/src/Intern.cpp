@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 14:35:35 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/26 16:08:37 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/03/03 15:40:07 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ AForm	*Intern::makeForm(const std::string &formName, const std::string &target) 
 			return (this->*creator[i])(target);
 		}
 	}
-	std::cout << formName << "doesn't exist" << std::endl;
-	return NULL;
+	
+	throw UnknownFormException();
 }
 
 AForm*	Intern::createShruberry(const std::string target) {
@@ -73,4 +73,9 @@ AForm*	Intern::createPardon(const std::string target) {
 AForm*	Intern::createRobotomy(const std::string target) {
 
 	return new RobotomyRequestForm(target);
+}
+
+const char* Intern::UnknownFormException::what() const throw() {
+
+	return "Unknown form type";
 }

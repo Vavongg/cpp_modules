@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 14:23:38 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/26 14:35:26 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/03/03 15:26:55 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ class Intern {
 		Intern &operator=(Intern const &copy);
 
 		AForm	*makeForm(const std::string &formName, const std::string &target);
+
+		class	UnknownFormException : public std::exception {
+
+			public:
+				virtual const char* what() const throw();
+		};
 };
 
 #endif

@@ -6,9 +6,9 @@ CFLAGS      = -Wall -Wextra -Werror -std=c++98
 RM          = rm -rf
 
 SRC         = src/main.cpp src/Bureaucrat.cpp src/AForm.cpp \
-				src/ShrubberyCreationForm.cpp src/PresidentialPardonForm.cpp src/RobotomyRequestForm.cpp \
-				src/Intern.cpp \
-				
+              src/ShrubberyCreationForm.cpp src/PresidentialPardonForm.cpp src/RobotomyRequestForm.cpp \
+              src/Intern.cpp
+
 DIR_OBJS    = objs
 
 OBJ = $(SRC:src/%.cpp=$(DIR_OBJS)/%.o)
@@ -26,11 +26,11 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(GREEN)Compilation de $(NAME) terminée !$(RESET)"
+	@printf "$(GREEN)Compilation de $(NAME) terminée !$(RESET)\n"
 
 $(DIR_OBJS)/%.o: src/%.cpp
 	@mkdir -p $(DIR_OBJS)
-	@echo "$(YELLOW)Compilation de $<...$(RESET)"
+	@printf "$(YELLOW)Compilation de $<...$(RESET)\n"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

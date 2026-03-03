@@ -25,11 +25,11 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(GREEN)Compilation de $(NAME) terminée !$(RESET)"
+	@printf "$(GREEN)Compilation de $(NAME) terminée !$(RESET)\n"
 
 $(DIR_OBJS)/%.o: src/%.cpp
 	@mkdir -p $(DIR_OBJS)
-	@echo "$(YELLOW)Compilation de $<...$(RESET)"
+	@printf "$(YELLOW)Compilation de $<...$(RESET)\n"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
