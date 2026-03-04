@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 14:22:54 by ainthana          #+#    #+#             */
-/*   Updated: 2026/03/03 15:39:53 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/03/04 15:45:56 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main() {
         Intern someRandomIntern;
         AForm* form1 = someRandomIntern.makeForm("shrubbery creation", "home");
         AForm* form2 = someRandomIntern.makeForm("robotomy request", "Bender");
-        AForm* form3 = someRandomIntern.makeForm("presidential pardon", "Arthur Dent");
+        AForm* form3 = someRandomIntern.makeForm("presidential pardon", "kyks");
         
         std::cout << GREEN << *form1 << RESET << std::endl;
         std::cout << GREEN << *form2 << RESET << std::endl;
@@ -54,7 +54,7 @@ int main() {
         Bureaucrat boss("Boss", 1);
         Bureaucrat lowLevel("Stagiaire", 150);
         
-        AForm* form = intern.makeForm("robotomy request", "Marvin");
+        AForm* form = intern.makeForm("robotomy request", "Senshy");
         
         std::cout << YELLOW << *form << RESET << std::endl;
         
@@ -99,7 +99,7 @@ int main() {
     std::cout << BOLD_BLUE << "\n=== TEST 5: Intern crée et bureaucrate exécute tout ===" << RESET << std::endl;
     try {
         Intern intern;
-        Bureaucrat god("God", 1);
+        Bureaucrat boss("Boss", 1);
         
         std::string formNames[] = {
             "shrubbery creation",
@@ -108,16 +108,16 @@ int main() {
         };
         
         std::string targets[] = {
-            "temple",
-            "Prophet",
-            "Sinner"
+            "Alexis",
+            "Walid",
+            "Rydom"
         };
         
         for (int i = 0; i < 3; i++) {
             std::cout << MAGENTA << "\n→ Formulaire " << i + 1 << ":" << RESET << std::endl;
             AForm* form = intern.makeForm(formNames[i], targets[i]);
-            god.signForm(*form);
-            god.executeForm(*form);
+            boss.signForm(*form);
+            boss.executeForm(*form);
             delete form;
         }
     }
