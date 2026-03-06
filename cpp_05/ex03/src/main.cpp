@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 14:22:54 by ainthana          #+#    #+#             */
-/*   Updated: 2026/03/04 15:45:56 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/03/04 17:05:31 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 #include "../include/Bureaucrat.hpp"
 
 int main() {
-    std::srand(std::time(NULL));
 
     std::cout << BOLD_BLUE << "\n=== TEST 1: Création de formulaires valides ===" << RESET << std::endl;
     try {

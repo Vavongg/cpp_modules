@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 13:49:14 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/26 14:09:27 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/03/04 17:09:46 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@
 #include "../include/PresidentialPardonForm.hpp"
 
 int main()
-{
-    std::srand(std::time(NULL));  // Initialiser le random
-	
+{	
     // ========== SHRUBBERY CREATION FORM ==========
 
     std::cout << BOLD_BLUE << "\n=== TEST 1: ShrubberyCreationForm - Signature et exécution ===" << RESET << std::endl;

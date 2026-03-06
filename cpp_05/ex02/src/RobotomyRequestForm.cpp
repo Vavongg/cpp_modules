@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 13:18:02 by ainthana          #+#    #+#             */
-/*   Updated: 2026/02/26 13:33:36 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/03/04 17:10:05 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ void	RobotomyRequestForm::execute(Bureaucrat const &executor) const {
 
 	std::cout << "* BZZZZZZ * DRILLING NOISES * BZZZZZZ *" << std::endl;
 	
+	std::srand(std::time(NULL));
+
 	if (std::rand() % 2 == 0)
 		std::cout << _target << " has been robotomized successfully!" << std::endl;
 	else
