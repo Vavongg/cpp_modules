@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 17:39:51 by ainthana          #+#    #+#             */
-/*   Updated: 2026/03/11 18:30:21 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/03/13 12:24:24 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Array {
 		}
 		
 		Array(unsigned int n) : _data(NULL), _size(n) {
-			if (n  > 0) {
+			if (n > 0) {
 				_data = new T[n];
 				for (unsigned int i = 0; i < n; i++) {
 					_data[i] = T();
@@ -69,7 +69,7 @@ class Array {
 		}
 
 		T		&operator[](unsigned int index) {
-			if (index>= _size)
+			if (index >= _size)
 				throw std::out_of_range("Index out of bounds");
 			return _data[index];
 		}
