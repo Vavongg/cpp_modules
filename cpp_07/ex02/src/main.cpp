@@ -6,7 +6,7 @@
 /*   By: ainthana <ainthana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 18:26:23 by ainthana          #+#    #+#             */
-/*   Updated: 2026/03/11 18:59:29 by ainthana         ###   ########.fr       */
+/*   Updated: 2026/03/13 12:20:39 by ainthana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,11 @@
 #define RESET        "\033[0m"
 
 int main() {
-    std::cout << BOLD_CYAN << "\n╔════════════════════════════════════════╗" << RESET << std::endl;
-    std::cout << BOLD_CYAN << "║         ARRAY TEMPLATE TESTS           ║" << RESET << std::endl;
-    std::cout << BOLD_CYAN << "╚════════════════════════════════════════╝\n" << RESET << std::endl;
 
     std::cout << YELLOW << "=== Test 1: Constructeur par défaut ===" << RESET << std::endl;
     {
         Array<int> empty;
         std::cout << GREEN << "Taille : " << empty.size() << RESET << std::endl;
-        // Attendu : 0
     }
 
     std::cout << YELLOW << "\n=== Test 2: Constructeur avec taille ===" << RESET << std::endl;
@@ -38,7 +34,6 @@ int main() {
         Array<int> arr(5);
         std::cout << GREEN << "Taille : " << arr.size() << RESET << std::endl;
         
-        // Valeurs par défaut
         std::cout << "Valeurs par défaut : ";
         for (unsigned int i = 0; i < arr.size(); i++) {
             std::cout << arr[i] << " ";
