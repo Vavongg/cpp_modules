@@ -24,17 +24,17 @@ class Span {
 		unsigned int	shortestSpan() const;
 		unsigned int	longestSpan() const;
 
-		template <typename InputIterator>
-		void	addRange(InputIterator begin, InputIterator end);
+		template <typename It>
+		void	addRange(It begin, It end);
 
 		unsigned int	size() const;
 
 };
 
-template <typename InputIterator>
-void	Span::addRange(InputIterator begin, InputIterator end) {
+template <typename It>
+void	Span::addRange(It begin, It end) {
 	
-	typename std::iterator_traits<InputIterator>::difference_type distance = std::distance(begin, end);
+	typename std::iterator_traits<It>::difference_type distance = std::distance(begin, end);
 
 	if (_numbers.size() + distance > _maxSize) {
 		throw std::length_error("Cannot add range: would exceed maximum size");
