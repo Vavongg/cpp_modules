@@ -19,7 +19,7 @@ int main() {
         v.push_back(40);
         v.push_back(50);
         
-        // Test 1a : Valeur présente
+        // Valeur présente
         try {
             std::vector<int>::iterator it = easyfind(v, 30);
             std::cout << GREEN << "✓ Trouvé : " << *it << RESET << std::endl;
@@ -29,7 +29,7 @@ int main() {
             std::cout << RED << "✗ Erreur : " << e.what() << RESET << std::endl;
         }
         
-        // Test 1b : Valeur absente
+        // Valeur absente
         try {
             easyfind(v, 100);
             std::cout << GREEN << "✗ ERREUR : Pas d'exception levée" << RESET << std::endl;
@@ -38,7 +38,7 @@ int main() {
             std::cout << RED << "✗ Exception : " << e.what() << RESET << std::endl;
         }
         
-        // Test 1c : Premier élément
+        // Premier élément
         try {
             std::vector<int>::iterator it = easyfind(v, 10);
             std::cout << GREEN << "✓ Trouvé : " << *it << RESET << std::endl;
@@ -48,7 +48,7 @@ int main() {
             std::cout << RED << "✗ Erreur : " << e.what() << RESET << std::endl;
         }
         
-        // Test 1d : Dernier élément
+        // Dernier élément
         try {
             std::vector<int>::iterator it = easyfind(v, 50);
             std::cout << GREEN << "✓ Trouvé : " << *it << RESET << std::endl;
@@ -66,7 +66,6 @@ int main() {
         lst.push_back(200);
         lst.push_back(300);
         
-        // Test 2a : Valeur présente
         try {
             std::list<int>::iterator it = easyfind(lst, 200);
             std::cout << GREEN << "✓ Trouvé dans list : " << *it << RESET << std::endl;
@@ -75,7 +74,6 @@ int main() {
             std::cout << RED << "✗ Erreur : " << e.what() << RESET << std::endl;
         }
         
-        // Test 2b : Valeur absente
         try {
             easyfind(lst, 999);
             std::cout << GREEN << "✗ ERREUR : Pas d'exception levée" << RESET << std::endl;
@@ -120,7 +118,7 @@ int main() {
         v.push_back(1);
         v.push_back(2);
         v.push_back(3);
-        v.push_back(2);  // Doublon
+        v.push_back(2);
         v.push_back(4);
         
         try {

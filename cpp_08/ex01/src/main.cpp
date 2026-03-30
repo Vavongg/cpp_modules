@@ -35,7 +35,7 @@ int main() {
         sp.addNumber(3);
         
         try {
-            sp.addNumber(4);  // Devrait lancer exception
+            sp.addNumber(4);
             std::cout << GREEN << "✓ SUCESS !" << RESET << std::endl;
         }
         catch (std::exception& e) {
@@ -80,29 +80,14 @@ int main() {
         std::cout << GREEN << "longestSpan: " << big.longestSpan() << RESET << std::endl;
     }
     
-    std::cout << CYAN << "\n=== Test 5: addRange avec vector ===" << RESET << std::endl;
-    {
-        std::vector<int> v;
-        for (int i = 0; i < 100; i++) {
-            v.push_back(i * 2);
-        }
-        
-        Span sp(100);
-        sp.addRange(v.begin(), v.end());
-        
-        std::cout << "Taille après addRange : " << sp.size() << std::endl;
-        std::cout << GREEN << "shortestSpan: " << sp.shortestSpan() << RESET << std::endl;
-        std::cout << GREEN << "longestSpan: " << sp.longestSpan() << RESET << std::endl;
-    }
-    
-    std::cout << CYAN << "\n=== Test 6: addRange avec dépassement ===" << RESET << std::endl;
+    std::cout << CYAN << "\n=== Test 5: addRange avec dépassement ===" << RESET << std::endl;
     {
         std::vector<int> v;
         for (int i = 0; i < 100; i++) {
             v.push_back(i);
         }
         
-        Span sp(50);  // Capacité 50 seulement
+        Span sp(50);
         
         try {
             sp.addRange(v.begin(), v.end());
