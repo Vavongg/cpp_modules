@@ -1,6 +1,6 @@
 # ================== VARIABLES ================== #
 
-NAME        = 
+NAME        = btc
 CC          = c++
 CFLAGS      = -Wall -Wextra -Werror -std=c++98
 RM          = rm -rf
