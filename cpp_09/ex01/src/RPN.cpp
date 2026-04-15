@@ -52,14 +52,26 @@ void Rpn::calcul(std::string const &expression) {
                 _stack.push(a / b);
             }
         }
-        else {
+		else {
+			
+			std::stringstream ss1(token);
+			int num;
+			
+			if (!(ss1 >> num)) {
+				std::cerr << RED << "Error" << RESET << "\n";
+				return ;
+			}
 
-            std::stringstream ss1(token);
-            int num;
+			std::string remaining;
+			ss1 >> remaining;
+			
+			if (!remaining.empty()) {
+				std::cerr << RED << "Error" << RESET << "\n";
+				return ;
+			}
 
-            ss1 >> num;
-            _stack.push(num);
-        }
+			_stack.push(num);
+		}
     }
 
     if (_stack.size() != 1) {
