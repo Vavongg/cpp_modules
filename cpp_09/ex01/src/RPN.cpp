@@ -35,8 +35,8 @@ void Rpn::calcul(std::string const &expression) {
                 std::cerr << RED << "Error" << RESET << "\n";
                 return ;
             }
-            int b = _stack.top(); _stack.pop();
-            int a = _stack.top(); _stack.pop();
+            long b = _stack.top(); _stack.pop();
+            long a = _stack.top(); _stack.pop();
 
             if (token == "+")
 				_stack.push(a + b);
@@ -55,7 +55,7 @@ void Rpn::calcul(std::string const &expression) {
 		else {
 			
 			std::stringstream ss1(token);
-			int num;
+			long num;
 			
 			if (!(ss1 >> num)) {
 				std::cerr << RED << "Error" << RESET << "\n";

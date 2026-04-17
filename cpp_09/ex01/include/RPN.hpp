@@ -14,7 +14,7 @@
 class Rpn {
 
     private:
-        std::stack<int, std::list<int> > _stack;
+        std::stack<long, std::list<long> > _stack;
 
     public:
         Rpn();
