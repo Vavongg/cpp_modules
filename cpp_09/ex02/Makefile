@@ -1,11 +1,11 @@
 # ================== VARIABLES ================== #
 
-NAME        = 
+NAME        = PmergeMe
 CC          = c++
 CFLAGS      = -Wall -Wextra -Werror -std=c++98
 RM          = rm -rf
 
-SRC         = src/main.cpp
+SRC         = src/main.cpp src/PmergeMe.cpp
 DIR_OBJS    = objs
 
 OBJ = $(SRC:src/%.cpp=$(DIR_OBJS)/%.o)
