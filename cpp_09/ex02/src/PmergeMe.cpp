@@ -48,3 +48,25 @@ void	PmergeMe::sortWithVector(std::vector<int> &seq) {
 		(seq.size() - 1);
 	}
 }
+
+void	PmergeMe::sortWithDeque(std::deque<int> &seq) {
+	
+	std::deque<int>	winners;
+	std::deque<int>	losers;
+
+	for (int i = 0; i < seq.size(); i += 2) {
+		
+		if (seq[i] > seq[i + 1]) {
+			winners.push_back(seq[i]);
+			losers.push_back(seq[i + 1]);
+		}
+		else {
+			winners.push_back(seq[i + 1]);
+			losers.push_back(seq[i]);
+		}
+	}
+
+	if (seq.size() % 2 != 0) {
+		(seq.size() - 1);
+	}
+}
