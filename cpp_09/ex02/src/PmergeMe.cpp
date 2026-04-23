@@ -55,6 +55,21 @@ void	PmergeMe::sortWithVector(std::vector<int> &seq) {
 	}
 
 	sortWithVector(winners);
+
+	winners.insert(winners.begin(), losers[0]);
+
+	for (size_t i = 1; i < losers.size(); i++) {
+
+		std::vector<int>::iterator	pos = std::lower_bound(winners.begin(), winners.end(), losers[i]);
+		winners.insert(pos, losers[i]);
+	}
+
+	if (hasStraggler) {
+		std::vector<int>::iterator	pos = std::lower_bound(winners.begin(), winners.end(), straggler);
+		winners.insert(pos, straggler);
+	}
+
+	seq = winners;
 }
 
 void	PmergeMe::sortWithDeque(std::deque<int> &seq) {
@@ -85,4 +100,19 @@ void	PmergeMe::sortWithDeque(std::deque<int> &seq) {
 	}
 
 	sortWithDeque(winners);
+
+	winners.insert(winners.begin(), losers[0]);
+
+	for (size_t i = 1; i < losers.size(); i++) {
+
+		std::deque<int>::iterator	pos = std::lower_bound(winners.begin(), winners.end(), losers[i]);
+		winners.insert(pos, losers[i]);
+	}
+
+	if (hasStraggler) {
+		std::deque<int>::iterator	pos = std::lower_bound(winners.begin(), winners.end(), straggler);
+		winners.insert(pos, straggler);
+	}
+
+	seq = winners;
 }
