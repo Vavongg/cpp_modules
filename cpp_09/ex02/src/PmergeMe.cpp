@@ -58,7 +58,7 @@ void	PmergeMe::sortWithVector(std::vector<int> &seq) {
 	for (size_t i = 0; i < winners.size(); i++)
 		pairs.push_back(std::make_pair(winners[i], losers[i]));
 
-	sortWithVector(winners);
+	sortWithVector(winners); //recursion
 
 	losers.clear();
 	for (size_t i = 0; i < winners.size(); i++) {
@@ -72,10 +72,13 @@ void	PmergeMe::sortWithVector(std::vector<int> &seq) {
 
 	winners.insert(winners.begin(), losers[0]);
 
-	for (size_t i = 1; i < losers.size(); i++) {
+	std::vector<int> order = getInsertionOrder(losers.size());
+	for (size_t i = 0; i < order.size(); i++) {
 
-		std::vector<int>::iterator	pos = std::lower_bound(winners.begin(), winners.end(), losers[i]);
-		winners.insert(pos, losers[i]);
+		int idx = order[i];
+
+		std::vector<int>::iterator pos = std::lower_bound(winners.begin(), winners.end(), losers[idx]);
+		winners.insert(pos, losers[idx]);
 	}
 
 	if (hasStraggler) {
@@ -117,7 +120,7 @@ void	PmergeMe::sortWithDeque(std::deque<int> &seq) {
 	for (size_t i = 0; i < winners.size(); i++)
 		pairs.push_back(std::make_pair(winners[i], losers[i]));
 
-	sortWithDeque(winners);
+	sortWithDeque(winners); //recursion
 
 	losers.clear();
 	for (size_t i = 0; i < winners.size(); i++) {
@@ -131,10 +134,13 @@ void	PmergeMe::sortWithDeque(std::deque<int> &seq) {
 
 	winners.insert(winners.begin(), losers[0]);
 
-	for (size_t i = 1; i < losers.size(); i++) {
+	std::vector<int> order = getInsertionOrder(losers.size());
+	for (size_t i = 0; i < order.size(); i++) {
 
-		std::deque<int>::iterator	pos = std::lower_bound(winners.begin(), winners.end(), losers[i]);
-		winners.insert(pos, losers[i]);
+		int idx = order[i];
+
+		std::deque<int>::iterator pos = std::lower_bound(winners.begin(), winners.end(), losers[idx]);
+		winners.insert(pos, losers[idx]);
 	}
 
 	if (hasStraggler) {
@@ -143,4 +149,36 @@ void	PmergeMe::sortWithDeque(std::deque<int> &seq) {
 	}
 
 	seq = winners;
+}
+
+std::vector<int> PmergeMe::generateJacobsthal(int n) {
+
+    std::vector<int> jacob;
+    jacob.push_back(0);
+    jacob.push_back(1);
+
+    while (jacob.back() < n) {
+        size_t size = jacob.size();
+        int next = jacob[size - 1] + 2 * jacob[size - 2];
+        jacob.push_back(next);
+    }
+    return jacob;
+}
+
+std::vector<int> PmergeMe::getInsertionOrder(int n) {
+
+    std::vector<int> jacob = generateJacobsthal(n);
+    std::vector<int> order;
+
+    for (size_t i = 2; i < jacob.size(); i++) {
+        int end = jacob[i];
+        if (end > n) end = n;
+        int start = jacob[i - 1];
+
+        // Du Jacobsthal vers le bas
+        for (int j = end; j > start; j--) {
+            order.push_back(j - 1);  // -1 car index commence à 0
+        }
+    }
+    return order;
 }

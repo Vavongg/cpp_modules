@@ -17,6 +17,8 @@ class	PmergeMe {
 	private :
 		std::vector<int>	_vec;
 		std::deque<int>		_deq;
+		std::vector<int>	generateJacobsthal(int n);
+		std::vector<int>	getInsertionOrder(int n);
 	
 	public:
 		PmergeMe();
