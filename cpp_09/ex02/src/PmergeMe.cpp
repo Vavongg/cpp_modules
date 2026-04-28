@@ -54,7 +54,21 @@ void	PmergeMe::sortWithVector(std::vector<int> &seq) {
 		hasStraggler = true;
 	}
 
+	std::vector<std::pair<int, int> >	pairs;
+	for (size_t i = 0; i < winners.size(); i++)
+		pairs.push_back(std::make_pair(winners[i], losers[i]));
+
 	sortWithVector(winners);
+
+	losers.clear();
+	for (size_t i = 0; i < winners.size(); i++) {
+		for (size_t j = 0; j < pairs.size(); j++) {
+			if (pairs[j].first == winners[i]) {
+				losers.push_back(pairs[j].second);
+				break;
+			}
+		}
+	}
 
 	winners.insert(winners.begin(), losers[0]);
 
@@ -99,7 +113,21 @@ void	PmergeMe::sortWithDeque(std::deque<int> &seq) {
 		hasStraggler = true;
 	}
 
+	std::vector<std::pair<int, int> >	pairs;
+	for (size_t i = 0; i < winners.size(); i++)
+		pairs.push_back(std::make_pair(winners[i], losers[i]));
+
 	sortWithDeque(winners);
+
+	losers.clear();
+	for (size_t i = 0; i < winners.size(); i++) {
+		for (size_t j = 0; j < pairs.size(); j++) {
+			if (pairs[j].first == winners[i]) {
+				losers.push_back(pairs[j].second);
+				break;
+			}
+		}
+	}
 
 	winners.insert(winners.begin(), losers[0]);
 
