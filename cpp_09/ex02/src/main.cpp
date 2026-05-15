@@ -1,5 +1,14 @@
 #include "../include/PmergeMe.hpp"
 
+bool isValidNumber(char* str) {
+
+    for (int i = 0; str[i]; i++) {
+        if (str[i] < '0' || str[i] > '9')
+            return false;
+    }
+    return true;
+}
+
 int	main(int ac, char **av) {
 
 	if (ac < 2) {
@@ -12,6 +21,11 @@ int	main(int ac, char **av) {
 	std::deque<int> deq;
 
 	for (int i = 1; i < ac; i++) {
+
+    	if (!isValidNumber(av[i])) {
+        	std::cerr << RED << "Error" << RESET << std::endl;
+        	return 1;
+    	}
 
 		int num = atoi(av[i]);
 

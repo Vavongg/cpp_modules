@@ -70,6 +70,12 @@ void Rpn::calcul(std::string const &expression) {
 				return ;
 			}
 
+			if (num < 0 || num > 9) {
+
+				std::cerr << RED << "Error" << RESET << "\n";
+				return ;
+			}
+
 			_stack.push(num);
 		}
     }

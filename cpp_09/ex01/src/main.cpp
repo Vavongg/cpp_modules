@@ -6,7 +6,7 @@
 int main(int argc, char **argv) {
 
     if (argc != 2) {
-        std::cerr << RED << "Error: usage: ./RPN <expression>" << RESET << "\n";
+        std::cerr << "Error: usage: ./RPN \"expression\"" << std::endl;
         return 1;
     }
 
