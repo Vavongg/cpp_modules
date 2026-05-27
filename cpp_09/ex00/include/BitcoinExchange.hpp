@@ -31,7 +31,7 @@ class BitcoinExchange {
 
 		void	loadDatabase(std::string const &filename);
 		void	processInput(std::string const &filename);
-		float	getPrice(std::string const &date) const;
+		float	getPriceForDate(std::string const &date) const;
 };
 
 #endif

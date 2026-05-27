@@ -103,7 +103,7 @@ void	BitcoinExchange::processInput(std::string const &filename) {
 			continue;
 		}
 
-		float	dbPrice = getPrice(date);
+		float	dbPrice = getPriceForDate(date);
 
 		if (dbPrice < 0)
 			continue;
@@ -113,7 +113,7 @@ void	BitcoinExchange::processInput(std::string const &filename) {
 	}
 }
 
-float	BitcoinExchange::getPrice(std::string const &date) const {
+float	BitcoinExchange::getPriceForDate(std::string const &date) const {
 
 	std::map<std::string, float>::const_iterator it = _db.lower_bound(date);
 
