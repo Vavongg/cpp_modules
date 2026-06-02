@@ -172,7 +172,8 @@ std::vector<int> PmergeMe::getInsertionOrder(int n) {
 
     for (size_t i = 2; i < jacob.size(); i++) {
         int end = jacob[i];
-        if (end > n) end = n;
+        if (end > n)
+			end = n;
         int start = jacob[i - 1];
 
         // Du Jacobsthal vers le bas
